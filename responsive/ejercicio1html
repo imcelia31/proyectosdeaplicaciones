@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio - Responsive Básico</title>
+    <!-- Enlaces relativos: funcionan localmente, se rompen en GitHub Pages -->
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="stylesheet" href="../assets/css/ejercicio-1.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="site-title">Mi Portafolio</h1>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre">Sobre Mí</a></li>
+            <li><a href="#trabajos">Trabajos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <!-- Sección Hero -->
+        <section class="hero-section">
+          <h2>Hola, soy [Tu Nombre]</h2>
+          <p>Desarrollador Frontend especializado en diseño responsive</p>
+          <a href="#trabajos" class="cta-button">Ver mis trabajos</a>
+        </section>
+
+        <!-- Sección Proyectos -->
+        <section class="projects-section">
+          <h2>Mis Proyectos</h2>
+          <div class="projects-grid">
+            <article class="project-card">
+              <img
+                src="https://picsum.photos/400/300?random=1"
+                alt="Proyecto 1"
+              />
+              <div class="project-info">
+                <h3>Proyecto Web</h3>
+                <p>
+                  Descripción del primer proyecto desarrollado con técnicas
+                  responsive básicas.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="https://picsum.photos/400/300?random=2"
+                alt="Proyecto 2"
+              />
+              <div class="project-info">
+                <h3>Aplicación Móvil</h3>
+                <p>
+                  Una aplicación que se adapta a diferentes dispositivos usando
+                  media queries.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">Flexbox</span>
+                  <span class="tag">API</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="https://picsum.photos/400/300?random=3"
+                alt="Proyecto 3"
+              />
+              <div class="project-info">
+                <h3>Dashboard</h3>
+                <p>
+                  Panel de control con layout responsive usando Flexbox y media
+                  queries.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">Vue.js</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">Node.js</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          &copy; 2025 Mi Portafolio. Diseñado con técnicas responsive básicas.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
