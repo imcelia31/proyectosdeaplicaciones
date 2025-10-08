@@ -1,0 +1,301 @@
+/* ===== PORTAFOLIO RESPONSIVE BÁSICO (MOBILE-FIRST) ===== */
+/*
+ * ESTRATEGIA MOBILE-FIRST:
+ * 1. Estilos base ahora son móviles (pantallas pequeñas)
+ * 2. Media queries usan min-width en lugar de max-width
+ * 3. Progressive enhancement - agregamos estilos para pantallas más grandes
+ */
+
+/* Variables CSS básicas para Ejercicio 1 */
+:root {
+	--primary-color: #f15daf;
+	--secondary-color: #64748b;
+	--accent-color: #f15daf;
+	--white: #ffffff;
+	--border-color: #e2e8f0;
+	--spacing-sm: 1rem;
+	--spacing-md: 1.5rem;
+	--spacing-lg: 2rem;
+	--spacing-xl: 3rem;
+	--border-radius: 0.5rem;
+	--shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body {
+	font-family: system-ui, -apple-system, sans-serif;
+	line-height: 1.6;
+}
+
+/* ===== CONTAINER BÁSICO ===== */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 var(--spacing-sm);
+}
+
+/* ===== HEADER RESPONSIVO (Mobile-First: estilos base para móvil) ===== */
+.site-header {
+	background: var(--primary-color);
+	color: white;
+	padding: var(--spacing-md) 0;
+}
+
+.site-header .container {
+	display: flex;
+	flex-direction: column; /* Móvil: navegación vertical */
+	text-align: center;
+	gap: var(--spacing-sm);
+}
+
+.site-title {
+	font-size: 1.25rem; /* Móvil: título más pequeño */
+	font-weight: 700;
+}
+
+.main-nav ul {
+	display: flex;
+	flex-direction: column; /* Móvil: enlaces apilados verticalmente */
+	list-style: none;
+	gap: var(--spacing-sm);
+}
+
+.main-nav a {
+	color: white;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	border-radius: var(--border-radius);
+	transition: background-color 0.2s;
+}
+
+.main-nav a:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== SECCIONES ===== */
+.hero-section {
+	text-align: center;
+	padding: var(--spacing-lg) 0; /* Móvil: padding reducido */
+	background: linear-gradient(135deg, var(--primary-color) 0%, #7b81c0 100%);
+	color: rgb(255, 255, 255);
+	margin: var(--spacing-lg) 0;
+	border-radius: var(--border-radius);
+}
+
+.hero-section h2 {
+	font-size: 1.25rem; /* Móvil: texto más pequeño */
+	margin-bottom: var(--spacing-sm);
+}
+
+.hero-section p {
+	font-size: 1.125rem;
+	margin-bottom: var(--spacing-lg);
+	opacity: 0.9;
+}
+
+.projects-section {
+	margin: var(--spacing-xl) 0;
+}
+
+.projects-section h2 {
+	text-align: center;
+	font-size: 1.5rem; /* Móvil: tamaño moderado */
+	margin-bottom: var(--spacing-lg);
+}
+
+/* ===== GRID DE PROYECTOS CON FLEXBOX ===== */
+.projects-grid {
+	display: flex;
+	flex-direction: column; /* Móvil: una sola columna */
+	gap: var(--spacing-lg);
+	align-items: center;
+}
+
+.project-card {
+	width: 100%; /* Móvil: ancho completo */
+	max-width: 100%;
+	background: var(--white);
+	border-radius: var(--border-radius);
+	overflow: hidden;
+	box-shadow: var(--shadow);
+	transition: transform 0.2s;
+}
+
+.project-card:hover {
+	transform: translateY(-4px);
+}
+
+.project-card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.project-info {
+	padding: var(--spacing-md);
+}
+
+.project-info h3 {
+	font-size: 1.125rem;
+	margin-bottom: var(--spacing-sm);
+}
+
+.project-info p {
+	color: var(--secondary-color);
+	margin-bottom: var(--spacing-md);
+	font-size: 0.875rem;
+}
+
+/* ===== TAGS ===== */
+.project-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.tag {
+	background: var(--primary-color);
+	color: white;
+	padding: 0.25rem 0.75rem;
+	border-radius: 9999px;
+	font-size: 0.75rem;
+	font-weight: 500;
+}
+
+/* ===== BOTÓN CTA ===== */
+.cta-button {
+	background: var(--accent-color);
+	color: white;
+	padding: var(--spacing-sm) var(--spacing-lg);
+	text-decoration: none;
+	border-radius: var(--border-radius);
+	font-weight: 600;
+	transition: background-color 0.2s;
+	display: inline-block;
+}
+
+.cta-button:hover {
+	background: #db2c8c;
+}
+
+/* ===== MEDIA QUERIES (Mobile-First: Progressive Enhancement) ===== */
+/*
+ * ESTRATEGIA MOBILE-FIRST:
+ * - Estilos base son para móvil (ya definidos arriba)
+ * - min-width agrega estilos para pantallas más grandes
+ * - Progressive enhancement - mejoramos la experiencia conforme crece la pantalla
+ */
+
+/* Tablet: 2-3 columnas - 481px+ */
+@media (min-width: 481px) {
+	.site-title {
+		font-size: 1.5rem;
+	}
+
+	.projects-grid {
+		flex-direction: row; /* Tablet: múltiples columnas */
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.project-card {
+		flex: 1;
+		min-width: 280px;
+		max-width: 350px;
+	}
+
+	.hero-section h2 {
+		font-size: 1.5rem;
+	}
+
+	.projects-section h2 {
+		font-size: 1.75rem;
+	}
+}
+
+/* Desktop: Layout horizontal completo - 769px+ */
+@media (min-width: 769px) {
+	.site-header .container {
+		flex-direction: row; /* Desktop: navegación horizontal */
+		justify-content: space-between;
+		align-items: center;
+		text-align: left;
+	}
+
+	.main-nav ul {
+		flex-direction: row; /* Desktop: enlaces en línea */
+		gap: var(--spacing-md);
+	}
+
+	.site-title {
+		font-size: 1.5rem;
+	}
+
+	.project-card {
+		min-width: 300px;
+		max-width: 400px; /* Desktop: tarjetas más anchas */
+	}
+
+	.hero-section {
+		padding: var(--spacing-xl) 0; /* Desktop: más espacio */
+	}
+
+	.hero-section h2 {
+		font-size: 2rem; /* Desktop: títulos más grandes */
+	}
+
+	.hero-section p {
+		font-size: 1.125rem;
+	}
+}
+
+/* ===== TIPOGRAFÍA BÁSICA ===== */
+h1,
+h2,
+h3 {
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 1.5rem;
+}
+
+h2 {
+	font-size: 1.75rem;
+}
+
+h3 {
+	font-size: 1.125rem;
+}
+
+p {
+	margin-bottom: var(--spacing-sm);
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+	background: var(--secondary-color);
+	color: white;
+	text-align: center;
+	padding: var(--spacing-lg) 0;
+	margin-top: var(--spacing-xl);
+}
+
+/* ===== RESPONSIVE IMAGES ===== */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* ===== UTILIDADES ===== */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
