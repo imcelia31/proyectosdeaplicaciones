@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Portafolio Intrínseco - [Tu Nombre]</title>
+		<!-- Enlaces relativos: funcionan localmente, se rompen en GitHub Pages -->
+		<link rel="stylesheet" href="../assets/css/index.css" />
+		<link rel="stylesheet" href="../assets/css/ejercicio-3.css" />
+	</head>
+	<body>
+		<!-- Navegación SPA fija -->
+		<nav class="main-nav">
+			<div class="nav-container">
+				<a href="#home" class="nav-link active">Inicio</a>
+				<a href="#about" class="nav-link">Sobre Mí</a>
+				<a href="#work" class="nav-link">Trabajos</a>
+				<a href="#contact" class="nav-link">Contacto</a>
+			</div>
+		</nav>
+
+		<!-- Contenido principal con scroll-snap -->
+		<main class="scroll-container">
+			<!-- Sección Home -->
+			<section id="home" class="section home-section theme-light">
+				<div class="hero-background">
+					<picture>
+						<source media="(min-width: 1200px)" srcset="https://picsum.photos/1920/1080?random=hero-large" />
+						<source media="(min-width: 768px)" srcset="https://picsum.photos/1200/800?random=hero-medium" />
+						<img src="https://picsum.photos/768/600?random=hero-small" alt="Fondo hero responsive" class="hero-bg-image" />
+					</picture>
+				</div>
+				<div class="container">
+					<div class="hero-content">
+						<h1 class="hero-title">Hola, soy [Tu Nombre]</h1>
+						<p class="hero-subtitle">Desarrollador Frontend especializado en diseño intrínseco</p>
+						<a href="#work" class="cta-button">Ver mis trabajos</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Sección About -->
+			<section id="about" class="section about-section">
+				<div class="container">
+					<h2 class="section-title">Sobre Mí</h2>
+					<div class="about-content">
+						<div class="about-text">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+								magna aliqua.
+							</p>
+							<p>
+								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
+						</div>
+						<div class="about-image">
+							<picture>
+								<source media="(min-width: 768px)" srcset="https://picsum.photos/400/500?random=profile-large" />
+								<img src="https://picsum.photos/300/400?random=profile-small" alt="Foto de perfil" class="profile-image" />
+							</picture>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Sección Work -->
+			<section id="work" class="section work-section theme-light">
+				<div class="container">
+					<h2 class="section-title">Mis Trabajos</h2>
+					<div class="projects-grid">
+						<article class="project-card">
+							<div class="project-image-container">
+								<picture>
+									<source media="(min-width: 600px)" srcset="https://picsum.photos/600/400?random=1" />
+									<img src="https://picsum.photos/400/300?random=1" alt="Proyecto Web" class="project-image" />
+								</picture>
+								<div class="project-overlay">
+									<a href="#" class="project-link">Ver proyecto</a>
+								</div>
+							</div>
+							<div class="project-info">
+								<h3>Proyecto Web</h3>
+								<p>Descripción del proyecto desarrollado con técnicas modernas de CSS.</p>
+								<div class="project-tags">
+									<span class="tag">HTML</span>
+									<span class="tag">CSS</span>
+									<span class="tag">JavaScript</span>
+								</div>
+							</div>
+						</article>
+
+						<article class="project-card">
+							<div class="project-image-container">
+								<picture>
+									<source media="(min-width: 600px)" srcset="https://picsum.photos/600/400?random=2" />
+									<img src="https://picsum.photos/400/300?random=2" alt="Aplicación Móvil" class="project-image" />
+								</picture>
+								<div class="project-overlay">
+									<a href="#" class="project-link">Ver proyecto</a>
+								</div>
+							</div>
+							<div class="project-info">
+								<h3>Aplicación Móvil</h3>
+								<p>App responsive que se adapta intrínsecamente a diferentes dispositivos.</p>
+								<div class="project-tags">
+									<span class="tag">React</span>
+									<span class="tag">CSS Grid</span>
+									<span class="tag">API</span>
+								</div>
+							</div>
+						</article>
+
+						<article class="project-card">
+							<div class="project-image-container">
+								<picture>
+									<source media="(min-width: 600px)" srcset="https://picsum.photos/600/400?random=3" />
+									<img src="https://picsum.photos/400/300?random=3" alt="Dashboard" class="project-image" />
+								</picture>
+								<div class="project-overlay">
+									<a href="#" class="project-link">Ver proyecto</a>
+								</div>
+							</div>
+							<div class="project-info">
+								<h3>Dashboard</h3>
+								<p>Panel de control con visualizaciones fluidas y adaptativas.</p>
+								<div class="project-tags">
+									<span class="tag">Vue.js</span>
+									<span class="tag">D3.js</span>
+									<span class="tag">Node.js</span>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- Sección About con imagen de perfil responsive -->
+			<section id="about" class="section about-section theme-dark">
+				<div class="container">
+					<h2 class="section-title">Sobre Mí</h2>
+					<div class="about-content">
+						<div class="about-text">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+								magna aliqua.
+							</p>
+							<p>
+								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
+						</div>
+						<div class="about-image">
+							<picture>
+								<source media="(min-width: 768px)" srcset="https://picsum.photos/400/500?random=profile-large" />
+								<img src="https://picsum.photos/300/400?random=profile-small" alt="Foto de perfil" class="profile-image" />
+							</picture>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Sección Contact -->
+			<section id="contact" class="section contact-section theme-dark">
+				<div class="container">
+					<h2 class="section-title">Contacto</h2>
+					<div class="contact-content">
+						<div class="contact-info">
+							<h3>¡Hablemos!</h3>
+							<p>Estoy disponible para nuevos proyectos y colaboraciones.</p>
+							<div class="contact-details">
+								<a href="mailto:tu@email.com" class="contact-link">tu@email.com</a>
+								<a href="https://github.com/tuusuario" class="contact-link">GitHub</a>
+								<a href="https://linkedin.com/in/tuusuario" class="contact-link">LinkedIn</a>
+							</div>
+						</div>
+						<div class="contact-form">
+							<form>
+								<input type="text" placeholder="Tu nombre" required />
+								<input type="email" placeholder="Tu email" required />
+								<textarea placeholder="Tu mensaje" rows="4" required></textarea>
+								<button type="submit" class="submit-button">Enviar mensaje</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

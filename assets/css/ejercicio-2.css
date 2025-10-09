@@ -1,0 +1,273 @@
+/* ===== PORTAFOLIO RESPONSIVE CON TÉCNICAS MODERNAS ===== */
+
+:root {
+	--primary-color: #3b82f6;
+	--secondary-color: #64748b;
+	--accent-color: #f59e0b;
+	--border-color: #e2e8f0;
+	--shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+	--shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+	--border-radius: 0.75rem;
+	--spacing-xs: 0.5rem;
+	--spacing-sm: 1rem;
+	--spacing-md: 1.5rem;
+	--spacing-lg: 2rem;
+	--spacing-xl: 3rem;
+}
+
+body {
+	font-family: system-ui, -apple-system, sans-serif;
+	line-height: 1.6;
+}
+
+.container {
+	container-type: inline-size;
+	container-name: portfolio-container;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 var(--spacing-md);
+}
+
+/* ===== HEADER ===== */
+.portfolio-header {
+	background: var(--primary-color);
+	color: white;
+	padding: var(--spacing-lg) 0;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	box-shadow: var(--shadow);
+}
+
+.portfolio-header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var(--spacing-md);
+}
+
+.portfolio-title {
+	font-size: clamp(1.5rem, 4vw, 2.5rem);
+	font-weight: 700;
+}
+
+.portfolio-nav {
+	display: flex;
+	gap: var(--spacing-lg);
+	flex-wrap: wrap;
+}
+
+.portfolio-nav a {
+	color: white;
+	text-decoration: none;
+	padding: var(--spacing-xs) var(--spacing-sm);
+	border-radius: var(--border-radius);
+	transition: background-color 0.2s;
+	font-weight: 500;
+}
+
+.portfolio-nav a:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== GRID RESPONSIVO CON AUTO-FIT Y SUBGRID ===== */
+.projects-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: var(--spacing-lg);
+	margin: var(--spacing-xl) 0;
+}
+
+/* ===== SUBGRID PARA ALINEACIÓN PERFECTA ===== */
+.project-card {
+	display: grid;
+	grid-template-columns: subgrid;
+	grid-column: span 1;
+	/* Fallback para navegadores sin soporte de subgrid */
+	@supports not (grid-template-columns: subgrid) {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+/* Aplicar subgrid solo cuando está soportado */
+@supports (grid-template-columns: subgrid) {
+	.projects-grid {
+		grid-template-rows: auto auto 1fr auto; /* Título, imagen, descripción, tags */
+	}
+
+	.project-card {
+		display: grid;
+		grid-template-columns: subgrid;
+		grid-template-rows: subgrid;
+		grid-column: span 1;
+		grid-row: span 1;
+	}
+
+	.project-card h3 {
+		grid-row: 1;
+	}
+
+	.project-card img {
+		grid-row: 2;
+	}
+
+	.project-card p {
+		grid-row: 3;
+	}
+
+	.project-card .project-tags {
+		grid-row: 4;
+		align-self: end;
+	}
+}
+
+/* ===== CONTAINER QUERIES (ENFOQUE MOBILE-FIRST) ===== */
+/*
+ * ¡LOS CONTAINER QUERIES TAMBIÉN PUEDEN SER MOBILE-FIRST!
+ * Los estilos base son para contenedores estrechos (como móvil)
+ * min-width agrega estilos para contenedores más anchos
+ */
+
+/* Base: Contenedores estrechos (como móvil) - layout horizontal de tarjetas */
+.project-card {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: var(--spacing-md);
+}
+
+.project-card img {
+	width: 120px;
+	height: 90px;
+	object-fit: cover;
+	flex-shrink: 0;
+}
+
+.project-content {
+	flex: 1;
+}
+
+/* Mejora progresiva: Contenedores anchos - layout vertical de tarjetas */
+@container portfolio-container (min-width: 600px) {
+	.project-card {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0;
+	}
+
+	.project-card img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+		flex-shrink: 0;
+	}
+
+	.project-content {
+		flex: 1;
+		padding: var(--spacing-lg);
+	}
+}
+
+/* ===== TARJETAS DE PROYECTO ===== */
+.project-card {
+	background: var(--card-bg);
+	border-radius: var(--border-radius);
+	box-shadow: var(--shadow);
+	overflow: hidden;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--shadow-lg);
+}
+
+.project-card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	transition: transform 0.2s;
+}
+
+.project-card:hover img {
+	transform: scale(1.05);
+}
+
+.project-content {
+	padding: var(--spacing-lg);
+}
+
+.project-content h3 {
+	font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+	font-weight: 600;
+	margin-bottom: var(--spacing-sm);
+	color: var(--text-color);
+}
+
+.project-content p {
+	color: var(--secondary-color);
+	margin-bottom: var(--spacing-md);
+	line-height: 1.5;
+}
+
+/* ===== TAGS ===== */
+.project-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--spacing-xs);
+}
+
+.tag {
+	background: var(--primary-color);
+	color: white;
+	padding: var(--spacing-xs) var(--spacing-sm);
+	border-radius: 9999px;
+	font-size: 0.75rem;
+	font-weight: 500;
+}
+
+/* ===== TIPOGRAFÍA FLUIDA ===== */
+h1,
+h2,
+h3 {
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+h2 {
+	font-size: clamp(1.5rem, 4vw, 2.25rem);
+	text-align: center;
+	margin: var(--spacing-xl) 0;
+	color: var(--text-color);
+}
+
+/* ===== FOOTER ===== */
+.portfolio-footer {
+	background: var(--secondary-color);
+	color: white;
+	text-align: center;
+	padding: var(--spacing-lg) 0;
+	margin-top: var(--spacing-xl);
+}
+
+/* ===== RESPONSIVE IMAGES ===== */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* ===== UTILIDADES ===== */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
