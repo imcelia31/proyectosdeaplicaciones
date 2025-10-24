@@ -1,70 +1,246 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Breve descripción del sitio web." />
-    <meta name="keywords" content="diseño, web, educativo" />
-    <meta name="author" content="Nombre del autor" />
 
-    <title>Some Outstanding Webs – Análisis de Sitios Premiados</title>
-    <link rel="stylesheet" href="../assets/css/index.css" />
-    <link rel="stylesheet" href="../assets/css/sow.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Web por Celia</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/sow.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Oswald:wght@500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="loader" aria-hidden="false">
+        <div style="display:flex;align-items:center;">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
     <header>
-      <h1>Some Outstanding Webs</h1>
-      <nav>
-        <!-- Menú de navegación fijo -->
-        <ul>
-          <li><a href="#site-awwwards">Awwwards</a></li>
-          <li><a href="#site-webby">Webby</a></li>
-          <li><a href="#site-fwa">FWA</a></li>
-          <li><a href="#site-cssda">CSSDA</a></li>
-        </ul>
-      </nav>
+        <div class="header-top">
+            <nav class="section-nav" aria-label="Navegación de secciones">
+                <ul>
+                    <li><a href="#web-1" class="activo">01</a></li>
+                    <li><a href="#web-2">02</a></li>
+                    <li><a href="#web-3">03</a></li>
+                    <li><a href="#web-4">04</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="main-title-section">
+            <h1>ANÁLISIS WEB.</h1>
+            <div class="title-decoration">
+                <p>En este trabajo voy a analizar webs destacadas, evaluando su estructura, diseño visual, interacción,
+                    usabilidad y aspectos técnicos, y reflexionando críticamente sobre su impacto, accesibilidad y
+                    eficacia. El objetivo es aprender cómo se comunica identidad, contenido y experiencia de usuario de
+                    manera profesional y creativa.</p>
+            </div>
+        </div>
     </header>
 
     <main>
-      <section class="cover">
-        <h1 class="title">Some Outstanding Webs</h1>
-      </section>
 
-      <!-- Secciones individuales para cada sitio -->
-      <section id="site-awwwards">
-        <h2>Awwwards</h2>
-        <iframe
-          src="https://www.udit.es/portales/"
-          title="Sitio Awwwards"
-          width="100%"
-          height="400"
-          loading="lazy"
-        ></iframe>
+        <section id="web-1" class="analisis activo">
+            <h2 class="web-section-title">
+                01. LANDO NORRIS
+                <a class="external-link" href="https://landonorris.com" target="_blank" rel="noopener noreferrer"
+                    aria-label="Abrir Lando Norris en nueva pestaña"></a>
+            </h2>
+            <div class="web-name-box">
+                <iframe src="https://landonorris.com" title="Lando Norris" loading="lazy"></iframe>
+            </div>
+            <div class="contenido-analisis">
+                <div class="left-column">
+                    <h3>¿Qué es?</h3>
+                    <p>Es la web oficial del piloto de F1 Lando Norris, presentada como una carta de presentación
+                        profesional. Muestra su trayectoria dentro de la Fórmula 1, otras apariciones en el mundo del
+                        deporte y la moda, además de incluir una tienda de merchandising. Funciona como un portfolio
+                        personal pensado tanto para fans como para posibles colaboradores o marcas.</p>
+                    <h3>Conclusión</h3>
+                    <p>Es una web con una gran capacidad narrativa y visual, que logra comunicar la identidad del piloto
+                        de forma clara y atractiva. Me parece un excelente ejemplo de storytelling digital y diseño de
+                        marca personal, del cual se pueden extraer muchas ideas para futuros portfolios.</p>
+                </div>
+                <div class="right-column">
+                    <h3>Selección</h3>
+                    <p>Elegí esta web porque, aunque no se trata de un sitio premiado, tiene un gran atractivo visual y
+                        conceptual. Me parece interesante analizar una web que no vende un producto, sino que presenta a
+                        una persona y busca que el espectador la conozca a través de su diseño e identidad digital.</p>
+                    <h3>Impresión inicial</h3>
+                    <p>Nada más acceder, el sitio presenta al piloto de forma interactiva: al pasar el cursor sobre su
+                        rostro aparece su casco, creando una conexión inmediata con su figura profesional. Al hacer
+                        scroll, en lugar de desplazarse simplemente hacia abajo, la página se anima y cuenta una
+                        historia, dando a entender que la navegación está planteada como un storytelling dinámico y
+                        visual.</p>
+                    <h3>Estructura</h3>
+                    <p>La web se divide en dos secciones principales: “On Track”, donde muestra su trabajo con McLaren
+                        en la F1, y “Off Track”, donde se presentan sus campañas publicitarias y proyectos personales.
+                        Además, incluye un apartado de calendario con las competiciones actuales y pasadas, mostrando
+                        resultados, mapa del circuito y una imagen del evento. En la parte superior derecha hay un menú
+                        hamburguesa y un acceso directo a la tienda, lo que permite una navegación más rápida sin
+                        necesidad de recorrer toda la web.</p>
+                    <h3>Diseño visual</h3>
+                    <p>El diseño visual es muy cuidado y fiel a la identidad del piloto. El uso del color amarillo neón,
+                        característico de Lando Norris, refuerza su branding personal. Las formas del fondo, inspiradas
+                        en su casco, aportan dinamismo. La tipografía es moderna y legible, utilizada principalmente en
+                        slogans y mensajes motivacionales. En lugar de texto excesivo, se priorizan imágenes y
+                        animaciones superpuestas que mantienen la atención del espectador y hacen la experiencia visual
+                        estimulante.</p>
+                    <h3>Interacción</h3>
+                    <p>El sitio es completamente interactivo, con micro interacciones al pasar el cursor y transiciones
+                        suaves que refuerzan la narrativa visual. Estas animaciones aportan dinamismo sin llegar a ser
+                        intrusivas.</p>
+                    <h3>Usabilidad</h3>
+                    <p>El único punto menos favorable es el tiempo de carga entre secciones, aunque se compensa con
+                        detalles como el uso del logo del piloto como icono de carga, manteniendo la coherencia visual y
+                        de marca.</p>
+                </div>
+            </div>
+        </section>
 
-        <!-- Contenido de análisis del sitio Awwwards -->
-        <p>AQUI VA EL TEXTO</p>
-      </section>
+        <section id="web-2" class="analisis">
+            <h2>02. PALMER <a class="external-link" href="https://www.palmer-dinnerware.com" target="_blank"
+                    rel="noopener noreferrer" aria-label="Abrir Palmer Dinnerware en nueva pestaña"></a></h2>
+            <div class="web-name-box"><iframe src="https://www.palmer-dinnerware.com" title="Palmer Dinnerware"
+                    loading="lazy"></iframe></div>
+            <div class="contenido-analisis">
+                <div class="left-column">
+                    <h3>¿Qué es?</h3>
+                    <p>La web de la marca Palmer Dinnerware presenta sus colecciones de vajilla de diseño, pensadas
+                        tanto para uso profesional como doméstico. Muestra sus productos organizados por colecciones,
+                        explica la filosofía de la marca y funciona a la vez como catálogo y tienda online.</p>
+                    <h3>Conclusión</h3>
+                    <p>La web de Palmer Dinnerware es un excelente ejemplo de venta creativa. Su propuesta visual e
+                        interactiva la hace llamativa, original y memorable, dejando una huella clara en el usuario.
+                        Combina de forma equilibrada diseño, funcionalidad y experiencia de marca.</p>
+                </div>
+                <div class="right-column">
+                    <h3>Selección</h3>
+                    <p>Elegí esta web porque me interesa analizar un sitio que vende productos físicos, y me llamó la
+                        atención la forma creativa e interactiva en la que lo hace. Se aleja de lo convencional y
+                        propone una experiencia diferente a lo que había visto previamente.</p>
+                    <h3>Impresión inicial</h3>
+                    <p>Al entrar, la web transmite la sensación de que los platos están dispuestos sobre una mesa, lo
+                        que invita al usuario a moverse libremente por el espacio y explorar de manera interactiva.
+                        Desde el primer momento genera curiosidad y ganas de interactuar con el entorno visual.</p>
+                    <h3>Estructura</h3>
+                    <p>La web se organiza mediante un menú hamburguesa en la parte inferior, desde el cual se puede
+                        acceder a las secciones de colecciones, información sobre la marca y contacto. Junto a este menú
+                        hay un filtro que permite clasificar los productos por color, tipo o tamaño. En la parte
+                        superior, el usuario puede cambiar entre el espacio interactivo y una vista más convencional en
+                        cuadrícula, facilitando una navegación adaptada a distintos tipos de usuario.</p>
+                    <h3>Diseño visual</h3>
+                    <p>El sitio utiliza un fondo blanco que resalta los colores de la vajilla y refuerza la sensación de
+                        limpieza y orden. La tipografía es clara, moderna y minimalista, lo que contribuye a proyectar
+                        una imagen de marca fresca y cuidada. El conjunto transmite elegancia sin sobrecargar
+                        visualmente al usuario.</p>
+                    <h3>Interacción</h3>
+                    <p>El efecto permite al usuario desplazarse libremente por las colecciones, sumergiéndose en el
+                        producto. Además, al pasar el cursor sobre cada pieza, esta realiza una microanimación de
+                        ampliación, aportando dinamismo y una sensación de cercanía con el objeto.</p>
+                    <h3>Usabilidad</h3>
+                    <p>La navegación es sencilla e intuitiva. En varios apartados, la propia web guía al usuario sobre
+                        cómo interactuar, lo que facilita la experiencia incluso para quienes no están familiarizados
+                        con este tipo de interfaz.</p>
+                </div>
+            </div>
+        </section>
 
-      <section id="site-webby">
-        <h2>Webby Awards</h2>
-        <!-- Contenido de análisis del sitio Webby -->
-      </section>
+        <section id="web-3" class="analisis">
+            <h2>03. MITCHIVIN <a class="external-link" href="https://mitchivin.com" target="_blank"
+                    rel="noopener noreferrer" aria-label="Abrir Mitch Ivin en nueva pestaña"></a></h2>
+            <div class="web-name-box"><iframe src="https://mitchivin.com" title="Mitch Ivin" loading="lazy"></iframe>
+            </div>
+            <div class="contenido-analisis">
+                <div class="left-column">
+                    <h3>¿Qué es?</h3>
+                    <p>La web de Mitch Ivin es un portafolio interactivo que recrea la interfaz del sistema operativo
+                        Windows XP para mostrar su trabajo de diseño gráfico de una forma única y diferente.</p>
+                    <h3>Conclusión</h3>
+                    <p>La web de Mitch Ivin es un portafolio con un concepto único y muy original que convierte la
+                        nostalgia del espectador en una experiencia de diseño inmersiva. Su mayor fortaleza es la
+                        creatividad y la interacción, aunque sacrifica algo de usabilidad y hace que el espectador se
+                        centre más en la experiencia que en el trabajo en sí.</p>
+                </div>
+                <div class="right-column">
+                    <h3>Selección</h3>
+                    <p>Escogí esta web pensando en el futuro trabajo del portfolio: es una gran fuente de ideas a la
+                        hora de presentar proyectos de una forma llamativa y memorable.</p>
+                    <h3>Impresión inicial</h3>
+                    <p>Al entrar, la web engaña conscientemente al usuario con una pantalla de arranque que recuerda
+                        Windows XP y luego presenta un escritorio con iconos y el icónico fondo, ventanas emergentes y
+                        sonidos. La sensación es de exploración lúdica: el usuario navega como si estuviese usando un
+                        sistema antiguo, lo que genera curiosidad y diversión.</p>
+                    <h3>Estructura</h3>
+                    <p>La web se divide en pantalla de inicio y escritorio; dentro del escritorio hay cinco iconos
+                        interactuables que despliegan ventanas de texto: about me, my resume, my projects y contact me,
+                        además de un botón de start que funciona como menú.</p>
+                    <h3>Diseño visual</h3>
+                    <p>El diseño reproduce con precisión la estética de Windows XP: el cielo azul, los verdes del fondo
+                        y los tonos gris-azulados de las ventanas. La tipografía mezcla lo retro y lo actual, asegurando
+                        legibilidad dentro de la ambientación nostálgica.</p>
+                    <h3>Interacción</h3>
+                    <p>La web ofrece una gran interacción: animaciones de inicio, ventanas que se abren y cierran,
+                        iconos clicables y efectos sonoros que imitan el sistema original. Las microinteracciones
+                        aportan dinamismo y hacen la experiencia totalmente inmersiva y memorable.</p>
+                    <h3>Usabilidad</h3>
+                    <p>El sitio destaca por su interactividad; sin embargo, esa apuesta sacrifica algo de usabilidad, ya
+                        que el usuario puede centrarse más en la experiencia que en el contenido. Aun así, es un
+                        ejercicio creativo muy potente.</p>
+                </div>
+            </div>
+        </section>
 
-      <section id="site-FWA">
-        <h2>FWA</h2>
-        <!-- Contenido de análisis del sitio FWA-->
-      </section>
-
-      <section id="site-cssda">
-        <h2>CSSDA</h2>
-        <!-- Contenido de análisis del sitio CSSDA -->
-      </section>
-
-      <!-- Más secciones para FWA, CSS Design Awards, etc. -->
+        <section id="web-4" class="analisis">
+            <h2>04. AETHER <a class="external-link" href="https://aether1.ai" target="_blank" rel="noopener noreferrer"
+                    aria-label="Abrir Aether 1 en nueva pestaña"></a></h2>
+            <div class="web-name-box"><iframe src="https://aether1.ai" title="Aether 1" loading="lazy"></iframe></div>
+            <div class="contenido-analisis">
+                <div class="left-column">
+                    <h3>¿Qué es?</h3>
+                    <p>La web Aether 1 presenta unos auriculares de gama alta de la marca OFF+BRAND. El sitio funciona
+                        como un catálogo interactivo que sumerge al usuario en el producto, sus especificaciones, el
+                        diseño y la marca.</p>
+                    <h3>Conclusión</h3>
+                    <p>La web es un gran ejemplo de experiencia interactiva para producto premium; transmite lujo y
+                        modernidad, aunque puede resultar exigente para dispositivos menos potentes.</p>
+                </div>
+                <div class="right-column">
+                    <h3>Selección</h3>
+                    <p>Elegí esta web porque representa un ejemplo extremo de interacción digital, branding y producto
+                        físico; es útil para analizar cómo comunicar un producto premium de forma inmersiva.</p>
+                    <h3>Impresión inicial</h3>
+                    <p>Al ingresar, la experiencia muestra el producto como si estuviera bajo el agua; todo el entorno
+                        es interactivo y sumergente. Al hacer scroll comienza una narrativa animada donde se expone el
+                        producto.</p>
+                    <h3>Estructura</h3>
+                    <p>La web se organiza de forma lineal: el desplazamiento guía la narrativa del producto, y además
+                        cuenta con un menú hamburguesa superior para saltar a secciones concretas.</p>
+                    <h3>Diseño visual</h3>
+                    <p>Los colores principales son azules oscuros y eléctricos que refuerzan la imagen del producto y
+                        generan un entorno místico, cercano al mar o al espacio. El diseño transmite lujo y modernidad.
+                    </p>
+                    <h3>Interacción</h3>
+                    <p>Se usan animaciones fluidas que acompañan el desplazamiento: rotaciones de cámara, partículas y
+                        microinteracciones que hacen la experiencia inmersiva.</p>
+                    <h3>Usabilidad</h3>
+                    <p>La web comunica la idea de producto premium, aunque la experiencia intensiva puede dificultar
+                        encontrar información y puede ser exigente en equipos menos potentes.</p>
+                </div>
+            </div>
+        </section>
     </main>
-
     <footer>
-      <p>© 2025 Web Atelier (UDIT) – Informe de análisis.</p>
+        <p>© 2025 Análisis Web — Informe de Celia. Proyecto de práctica SOW.</p>
     </footer>
-  </body>
+
+    <script src="../js/script.js"></script>
+</body>
+
 </html>
