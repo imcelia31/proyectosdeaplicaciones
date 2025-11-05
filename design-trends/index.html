@@ -1,0 +1,209 @@
+¡<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/reset.css"/>
+    <link rel="stylesheet" href="../assets/css/desing-trends.css"/>
+</head>
+
+<body>
+    <div class="hero">
+        <div>
+            <h1>IGOR</h1>
+            <p>a tyler the creator album<br>2019 grammy best rap album</p>
+            <div class="scroll-indicator">
+                ↓ Scroll down to begin the story ↓
+            </div>
+        </div>
+    </div>
+
+    <div class="story-section chapter-1" data-observe="">
+        <div class="story-content">
+            <h2>Chapter 1: The Beginning</h2>
+            <p style="font-size: 1.2rem; line-height: 1.8;">Scrollytelling combines scrolling with storytelling. As users scroll, content is revealed, animated, or transformed—creating an engaging narrative experience.</p>
+            
+            <div class="stat-display">
+                <div class="stat-item">
+                    <span class="stat-number">3x</span>
+                    <span class="stat-label">More Engaging</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">70%</span>
+                    <span class="stat-label">Longer Sessions</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2x</span>
+                    <span class="stat-label">Better Retention</span>
+                </div>
+            </div>
+
+            <p>Traditional web pages present all information at once. Scrollytelling reveals information progressively, guiding users through a curated journey.</p>
+        </div>
+    </div>
+
+    <div class="parallax-section">
+        <div class="parallax-content">
+            <h3>The Power of Progressive Disclosure</h3>
+            <p style="font-size: 1.1rem;">Information revealed step by step is easier to digest</p>
+        </div>
+    </div>
+
+    <div class="story-section chapter-2" data-observe="">
+        <div class="story-content">
+            <h2>Chapter 2: The Techniques</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Scrollytelling uses several techniques to create engaging experiences:</p>
+
+            <div class="interactive-cards">
+                <div class="card">
+                    <h4>Fade In</h4>
+                    <p>Elements appear as they enter the viewport, creating a sense of discovery.</p>
+                </div>
+                <div class="card">
+                    <h4>Parallax</h4>
+                    <p>Different layers move at different speeds, creating depth and dimension.</p>
+                </div>
+                <div class="card">
+                    <h4>Triggered Animations</h4>
+                    <p>Actions occur when users reach specific scroll positions.</p>
+                </div>
+            </div>
+
+            <p style="margin-top: 2rem;">These techniques work together to create a cohesive narrative flow.</p>
+        </div>
+    </div>
+
+    <div class="story-section chapter-1" data-observe="">
+        <div class="story-content">
+            <h2>Timeline Example</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Perfect for showing process, history, or journey:</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Step 1: Plan</h4>
+                        <p>Define your narrative structure and key moments you want to highlight.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Step 2: Design</h4>
+                        <p>Create visual assets and determine animation triggers for each section.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Step 3: Implement</h4>
+                        <p>Use Intersection Observer API or libraries like ScrollReveal to bring it to life.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="story-section chapter-3" data-observe="">
+        <div class="story-content">
+            <h2>Chapter 3: Implementation</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Modern browsers provide the Intersection Observer API for detecting when elements enter the viewport:</p>
+
+            <div style="background: rgba(0, 0, 0, 0.3); padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+                <pre style="color: #e0e0e0; overflow-x: auto;"><code>// Observe elements as they scroll into view
+const observer = new IntersectionObserver((entries) =&gt; {
+  entries.forEach(entry =&gt; {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+
+// Observe all sections
+document.querySelectorAll('[data-observe]')
+  .forEach(section =&gt; observer.observe(section));</code></pre>
+            </div>
+
+            <div class="interactive-cards">
+                <div class="card">
+                    <h4>✅ Pros</h4>
+                    <p>• Highly engaging<br>• Guides user attention<br>• Great for data stories<br>• Memorable experiences</p>
+                </div>
+                <div class="card">
+                    <h4>⚠️ Cons</h4>
+                    <p>• Can be heavy on resources<br>• Requires more dev time<br>• May confuse some users<br>• Needs good UX design</p>
+                </div>
+                <div class="card">
+                    <h4>💡 Best For</h4>
+                    <p>• Product launches<br>• Data journalism<br>• Portfolio showcases<br>• Educational content</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="final-section">
+        <div class="final-content">
+            <h2>The End... or Just the Beginning?</h2>
+            <p>You've experienced scrollytelling firsthand. Now imagine using this technique to tell your own stories—whether for a portfolio, a product launch, or an educational project.</p>
+            <button class="cta-button" onclick="scrollToTop()">Start Over</button>
+            
+            <p style="margin-top: 3rem; font-size: 0.95rem; opacity: 0.8;">
+                <strong>Atelier Reflection:</strong> How did scrolling change your experience of this story? Was it more engaging than reading a static page? Consider how you might use progressive disclosure in your own projects.
+            </p>
+        </div>
+    </div>
+
+    <div class="info-overlay">
+        <div>Scroll Progress: <strong><span id="progress">0</span>%</strong></div>
+    </div>
+
+    <script>
+        // Intersection Observer for scroll-triggered animations
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections with data-observe attribute
+        document.querySelectorAll('[data-observe]').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Scroll progress indicator
+        function updateProgress() {
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrollTop = window.scrollY;
+            const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+            
+            document.getElementById('progress').textContent = Math.round(scrollPercent);
+        }
+
+        window.addEventListener('scroll', updateProgress);
+        updateProgress();
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Add smooth scroll behavior
+        document.documentElement.style.scrollBehavior = 'smooth';
+    </script>
+
+
+
+</body>
+</html>
